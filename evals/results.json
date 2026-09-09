@@ -1,0 +1,499 @@
+{
+  "metric": "Mean paired improvement in percentage points across four cases per workflow",
+  "generation_effort": "medium",
+  "judge": "gpt-5.6-sol high",
+  "sol_scoring": "v2-sprint-corrections-3; corrected scoring of existing outputs",
+  "workflows": [
+    {
+      "workflow": "logic-model",
+      "label": "Logic Model",
+      "sonnet_mean_improvement_pp": -6.871118012422359,
+      "opus_mean_improvement_pp": 8.01190476190476,
+      "sol_mean_improvement_pp": 8.659185017880676,
+      "sol_scoring": "v2-sprint-corrections-3"
+    },
+    {
+      "workflow": "grant-proposal",
+      "label": "Grant Proposal",
+      "sonnet_mean_improvement_pp": 11.696875921013852,
+      "opus_mean_improvement_pp": 22.699037233519988,
+      "sol_mean_improvement_pp": 19.63346104725415,
+      "sol_scoring": "v2-sprint-corrections-3"
+    },
+    {
+      "workflow": "program-results",
+      "label": "Program Results",
+      "sonnet_mean_improvement_pp": -0.5643468849990559,
+      "opus_mean_improvement_pp": 5.893774703557312,
+      "sol_mean_improvement_pp": 4.425824175824172,
+      "sol_scoring": "v2-sprint-corrections-3"
+    },
+    {
+      "workflow": "grant-report",
+      "label": "Grant Report",
+      "sonnet_mean_improvement_pp": 23.87820512820513,
+      "opus_mean_improvement_pp": 1.6730769230769218,
+      "sol_mean_improvement_pp": 18.07371794871795,
+      "sol_scoring": "v2-sprint-corrections-3"
+    },
+    {
+      "workflow": "review-before-sending",
+      "label": "Review Before Sending",
+      "sonnet_mean_improvement_pp": 14.699792960662524,
+      "opus_mean_improvement_pp": 9.497929606625261,
+      "sol_mean_improvement_pp": 8.721532091097313,
+      "sol_scoring": "v2-sprint-corrections-3"
+    }
+  ],
+  "cases": {
+    "sonnet": [
+      {
+        "workflow": "grant-proposal",
+        "case_id": "GP-DEV-01",
+        "baseline_score": 0.6785714285714286,
+        "skill_score": 0.6785714285714286
+      },
+      {
+        "workflow": "grant-proposal",
+        "case_id": "GP-DEV-02",
+        "baseline_score": 0.6153846153846154,
+        "skill_score": 0.7307692307692307
+      },
+      {
+        "workflow": "grant-proposal",
+        "case_id": "GP-DEV-03",
+        "baseline_score": 0.5862068965517241,
+        "skill_score": 0.8275862068965517
+      },
+      {
+        "workflow": "grant-proposal",
+        "case_id": "GP-DEV-04",
+        "baseline_score": 0.6666666666666666,
+        "skill_score": 0.7777777777777778
+      },
+      {
+        "workflow": "grant-report",
+        "case_id": "GR-DEV-01",
+        "baseline_score": 0.4230769230769231,
+        "skill_score": 0.6923076923076923
+      },
+      {
+        "workflow": "grant-report",
+        "case_id": "GR-DEV-02",
+        "baseline_score": 0.6666666666666666,
+        "skill_score": 0.7692307692307693
+      },
+      {
+        "workflow": "grant-report",
+        "case_id": "GR-DEV-03",
+        "baseline_score": 0.23076923076923078,
+        "skill_score": 0.7307692307692307
+      },
+      {
+        "workflow": "grant-report",
+        "case_id": "GR-DEV-04",
+        "baseline_score": 0.7916666666666666,
+        "skill_score": 0.875
+      },
+      {
+        "workflow": "logic-model",
+        "case_id": "LM-DEV-01",
+        "baseline_score": 0.9047619047619048,
+        "skill_score": 0.9523809523809523
+      },
+      {
+        "workflow": "logic-model",
+        "case_id": "LM-DEV-02",
+        "baseline_score": 0.9166666666666666,
+        "skill_score": 0.5833333333333334
+      },
+      {
+        "workflow": "logic-model",
+        "case_id": "LM-DEV-03",
+        "baseline_score": 0.7391304347826086,
+        "skill_score": 0.7083333333333334
+      },
+      {
+        "workflow": "logic-model",
+        "case_id": "LM-DEV-04",
+        "baseline_score": 0.8333333333333334,
+        "skill_score": 0.875
+      },
+      {
+        "workflow": "program-results",
+        "case_id": "PR-DEV-01",
+        "baseline_score": 0.7916666666666666,
+        "skill_score": 0.7083333333333334
+      },
+      {
+        "workflow": "program-results",
+        "case_id": "PR-DEV-02",
+        "baseline_score": 0.8095238095238095,
+        "skill_score": 0.8181818181818182
+      },
+      {
+        "workflow": "program-results",
+        "case_id": "PR-DEV-03",
+        "baseline_score": 0.8695652173913043,
+        "skill_score": 1.0
+      },
+      {
+        "workflow": "program-results",
+        "case_id": "PR-DEV-04",
+        "baseline_score": 0.9583333333333334,
+        "skill_score": 0.88
+      },
+      {
+        "workflow": "review-before-sending",
+        "case_id": "RV-DEV-01",
+        "baseline_score": 0.782608695652174,
+        "skill_score": 0.8695652173913043
+      },
+      {
+        "workflow": "review-before-sending",
+        "case_id": "RV-DEV-02",
+        "baseline_score": 0.75,
+        "skill_score": 0.9565217391304348
+      },
+      {
+        "workflow": "review-before-sending",
+        "case_id": "RV-DEV-03",
+        "baseline_score": 0.7619047619047619,
+        "skill_score": 0.8571428571428571
+      },
+      {
+        "workflow": "review-before-sending",
+        "case_id": "RV-DEV-04",
+        "baseline_score": 0.5833333333333334,
+        "skill_score": 0.782608695652174
+      }
+    ],
+    "opus": [
+      {
+        "workflow": "Grant Proposal",
+        "case_id": "GP-DEV-01",
+        "baseline_score": 0.6666666666666666,
+        "skill_score": 0.9259259259259259,
+        "delta_pp": 25.92592592592593,
+        "skill_critical_fail": 1,
+        "skill_critical_unclear": 0
+      },
+      {
+        "workflow": "Grant Proposal",
+        "case_id": "GP-DEV-02",
+        "baseline_score": 0.6153846153846154,
+        "skill_score": 0.96,
+        "delta_pp": 34.46153846153845,
+        "skill_critical_fail": 0,
+        "skill_critical_unclear": 0
+      },
+      {
+        "workflow": "Grant Proposal",
+        "case_id": "GP-DEV-03",
+        "baseline_score": 0.6551724137931034,
+        "skill_score": 0.7,
+        "delta_pp": 4.482758620689653,
+        "skill_critical_fail": 2,
+        "skill_critical_unclear": 0
+      },
+      {
+        "workflow": "Grant Proposal",
+        "case_id": "GP-DEV-04",
+        "baseline_score": 0.7037037037037037,
+        "skill_score": 0.9629629629629629,
+        "delta_pp": 25.92592592592592,
+        "skill_critical_fail": 0,
+        "skill_critical_unclear": 0
+      },
+      {
+        "workflow": "Grant Report",
+        "case_id": "GR-DEV-01",
+        "baseline_score": 0.8076923076923077,
+        "skill_score": 0.6538461538461539,
+        "delta_pp": -15.384615384615385,
+        "skill_critical_fail": 0,
+        "skill_critical_unclear": 2
+      },
+      {
+        "workflow": "Grant Report",
+        "case_id": "GR-DEV-02",
+        "baseline_score": 0.56,
+        "skill_score": 0.56,
+        "delta_pp": 0.0,
+        "skill_critical_fail": 2,
+        "skill_critical_unclear": 2
+      },
+      {
+        "workflow": "Grant Report",
+        "case_id": "GR-DEV-03",
+        "baseline_score": 0.6538461538461539,
+        "skill_score": 0.8846153846153846,
+        "delta_pp": 23.076923076923073,
+        "skill_critical_fail": 1,
+        "skill_critical_unclear": 1
+      },
+      {
+        "workflow": "Grant Report",
+        "case_id": "GR-DEV-04",
+        "baseline_score": 0.76,
+        "skill_score": 0.75,
+        "delta_pp": -1.0000000000000009,
+        "skill_critical_fail": 0,
+        "skill_critical_unclear": 1
+      },
+      {
+        "workflow": "Logic Model",
+        "case_id": "LM-DEV-01",
+        "baseline_score": 0.8095238095238095,
+        "skill_score": 1.0,
+        "delta_pp": 19.047619047619047,
+        "skill_critical_fail": 0,
+        "skill_critical_unclear": 0
+      },
+      {
+        "workflow": "Logic Model",
+        "case_id": "LM-DEV-02",
+        "baseline_score": 0.7083333333333334,
+        "skill_score": 0.75,
+        "delta_pp": 4.1666666666666625,
+        "skill_critical_fail": 1,
+        "skill_critical_unclear": 0
+      },
+      {
+        "workflow": "Logic Model",
+        "case_id": "LM-DEV-03",
+        "baseline_score": 0.8333333333333334,
+        "skill_score": 0.875,
+        "delta_pp": 4.1666666666666625,
+        "skill_critical_fail": 1,
+        "skill_critical_unclear": 0
+      },
+      {
+        "workflow": "Logic Model",
+        "case_id": "LM-DEV-04",
+        "baseline_score": 0.8333333333333334,
+        "skill_score": 0.88,
+        "delta_pp": 4.666666666666663,
+        "skill_critical_fail": 0,
+        "skill_critical_unclear": 0
+      },
+      {
+        "workflow": "Program Results",
+        "case_id": "PR-DEV-01",
+        "baseline_score": 0.8333333333333334,
+        "skill_score": 0.92,
+        "delta_pp": 8.666666666666668,
+        "skill_critical_fail": 1,
+        "skill_critical_unclear": 0
+      },
+      {
+        "workflow": "Program Results",
+        "case_id": "PR-DEV-02",
+        "baseline_score": 0.7727272727272727,
+        "skill_score": 0.9130434782608695,
+        "delta_pp": 14.03162055335968,
+        "skill_critical_fail": 0,
+        "skill_critical_unclear": 0
+      },
+      {
+        "workflow": "Program Results",
+        "case_id": "PR-DEV-03",
+        "baseline_score": 0.8695652173913043,
+        "skill_score": 0.9583333333333334,
+        "delta_pp": 8.876811594202906,
+        "skill_critical_fail": 0,
+        "skill_critical_unclear": 0
+      },
+      {
+        "workflow": "Program Results",
+        "case_id": "PR-DEV-04",
+        "baseline_score": 0.92,
+        "skill_score": 0.84,
+        "delta_pp": -8.000000000000007,
+        "skill_critical_fail": 1,
+        "skill_critical_unclear": 0
+      },
+      {
+        "workflow": "Review Before Sending",
+        "case_id": "RV-DEV-01",
+        "baseline_score": 0.7391304347826086,
+        "skill_score": 0.8695652173913043,
+        "delta_pp": 13.043478260869568,
+        "skill_critical_fail": 2,
+        "skill_critical_unclear": 0
+      },
+      {
+        "workflow": "Review Before Sending",
+        "case_id": "RV-DEV-02",
+        "baseline_score": 0.8333333333333334,
+        "skill_score": 1.0,
+        "delta_pp": 16.666666666666664,
+        "skill_critical_fail": 0,
+        "skill_critical_unclear": 0
+      },
+      {
+        "workflow": "Review Before Sending",
+        "case_id": "RV-DEV-03",
+        "baseline_score": 0.8571428571428571,
+        "skill_score": 0.8095238095238095,
+        "delta_pp": -4.761904761904756,
+        "skill_critical_fail": 0,
+        "skill_critical_unclear": 1
+      },
+      {
+        "workflow": "Review Before Sending",
+        "case_id": "RV-DEV-04",
+        "baseline_score": 0.6956521739130435,
+        "skill_score": 0.8260869565217391,
+        "delta_pp": 13.043478260869568,
+        "skill_critical_fail": 1,
+        "skill_critical_unclear": 1
+      }
+    ],
+    "sol": [
+      {
+        "workflow": "grant-proposal",
+        "case_id": "GP-DEV-04",
+        "baseline_score": 0.6296296296296297,
+        "skill_score": 0.8888888888888888
+      },
+      {
+        "workflow": "grant-proposal",
+        "case_id": "GP-DEV-02",
+        "baseline_score": 0.72,
+        "skill_score": 0.96
+      },
+      {
+        "workflow": "grant-proposal",
+        "case_id": "GP-DEV-03",
+        "baseline_score": 0.8620689655172413,
+        "skill_score": 1.0
+      },
+      {
+        "workflow": "grant-proposal",
+        "case_id": "GP-DEV-01",
+        "baseline_score": 0.8148148148148148,
+        "skill_score": 0.9629629629629629
+      },
+      {
+        "workflow": "grant-report",
+        "case_id": "GR-DEV-03",
+        "baseline_score": 0.7307692307692307,
+        "skill_score": 0.9230769230769231
+      },
+      {
+        "workflow": "grant-report",
+        "case_id": "GR-DEV-01",
+        "baseline_score": 0.6538461538461539,
+        "skill_score": 0.8461538461538461
+      },
+      {
+        "workflow": "grant-report",
+        "case_id": "GR-DEV-02",
+        "baseline_score": 0.7083333333333334,
+        "skill_score": 0.92
+      },
+      {
+        "workflow": "grant-report",
+        "case_id": "GR-DEV-04",
+        "baseline_score": 0.8333333333333334,
+        "skill_score": 0.96
+      },
+      {
+        "workflow": "logic-model",
+        "case_id": "LM-DEV-04",
+        "baseline_score": 0.7916666666666666,
+        "skill_score": 0.9166666666666666
+      },
+      {
+        "workflow": "logic-model",
+        "case_id": "LM-DEV-03",
+        "baseline_score": 0.8695652173913043,
+        "skill_score": 1.0
+      },
+      {
+        "workflow": "logic-model",
+        "case_id": "LM-DEV-01",
+        "baseline_score": 0.9523809523809523,
+        "skill_score": 0.9545454545454546
+      },
+      {
+        "workflow": "logic-model",
+        "case_id": "LM-DEV-02",
+        "baseline_score": 0.8695652173913043,
+        "skill_score": 0.9583333333333334
+      },
+      {
+        "workflow": "program-results",
+        "case_id": "PR-DEV-01",
+        "baseline_score": 0.9615384615384616,
+        "skill_score": 1.0
+      },
+      {
+        "workflow": "program-results",
+        "case_id": "PR-DEV-02",
+        "baseline_score": 0.9047619047619048,
+        "skill_score": 0.9565217391304348
+      },
+      {
+        "workflow": "program-results",
+        "case_id": "PR-DEV-03",
+        "baseline_score": 0.9565217391304348,
+        "skill_score": 0.9166666666666666
+      },
+      {
+        "workflow": "program-results",
+        "case_id": "PR-DEV-04",
+        "baseline_score": 0.8333333333333334,
+        "skill_score": 0.96
+      },
+      {
+        "workflow": "review-before-sending",
+        "case_id": "RV-DEV-01",
+        "baseline_score": 0.8695652173913043,
+        "skill_score": 0.8695652173913043
+      },
+      {
+        "workflow": "review-before-sending",
+        "case_id": "RV-DEV-02",
+        "baseline_score": 0.6666666666666666,
+        "skill_score": 0.9565217391304348
+      },
+      {
+        "workflow": "review-before-sending",
+        "case_id": "RV-DEV-03",
+        "baseline_score": 0.8571428571428571,
+        "skill_score": 0.9523809523809523
+      },
+      {
+        "workflow": "review-before-sending",
+        "case_id": "RV-DEV-04",
+        "baseline_score": 0.8695652173913043,
+        "skill_score": 0.8333333333333334
+      }
+    ]
+  },
+  "critical_decisions": {
+    "sonnet": {
+      "fail": 30,
+      "unclear": 8
+    },
+    "opus": {
+      "fail": 13,
+      "unclear": 8
+    }
+  },
+  "sources": {
+    "combined_results_sha256": "880356b9516df375662f29bc303508dd47ad024d5b61bc6405ed5ac5d735ae40"
+  },
+  "evaluated_files": {
+    "skills/grant-proposal/SKILL.md": "1490c016428396ac1692364228666cb7a3f0e7b24bf63c6bf635a84adb682481",
+    "skills/grant-report/SKILL.md": "b267256866f8c0de26a20608320ef222f8bb9c1ccfeb478c1ad3a19f12faaf94",
+    "skills/logic-model/SKILL.md": "85b380028476c9d7ee2290874c9cdc1833cae193ed3ed1d29225de9b165ca3e5",
+    "skills/program-results/SKILL.md": "d5b3420c8f99a2e20baa8c40b678c54f31718d72bec1fb183a2b228c0a7d1513",
+    "skills/review-before-sending/SKILL.md": "7050dd1935db2dfd036577f216e4ba23fd50ec95792c47fbed1508f9bccb44e3",
+    "references/grant-report-artifact-contract.md": "9917cfe3a02cc800587217ac795a7be0ab61c41a2d7137135a8499ee54233041",
+    "references/review-framework.md": "63388817f9b40e94cf013bf0fd1e1190bde10dad617b95b7742f720af6f15ba0",
+    "references/source-and-consent.md": "22b933651b7d76e1cfc4c4160978c145068f635bfbe43f4233a098142d8225e2"
+  }
+}

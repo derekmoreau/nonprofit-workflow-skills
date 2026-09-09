@@ -1,0 +1,8 @@
+{
+  "name": "nonprofit",
+  "version": "2.0.0-dev.20260907",
+  "description": "Five file-first nonprofit workflows: build a logic model, draft a grant proposal, explain program results, fill a grant report, and review a draft before staff approval.",
+  "author": {
+    "name": "Derek Moreau"
+  }
+}
