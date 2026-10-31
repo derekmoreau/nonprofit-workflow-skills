@@ -42,6 +42,8 @@ Use **pass** when the condition is met, **fail** when it is violated, **unclear*
 
 ### Example LLM judge prompt
 
+See [grading changes and limits](#grading-changes-and-limits) for the later rules.
+
 Supply the inputs listed below with this starter prompt. Adapt it to your task; it is not the historical evaluation prompt or a recipe for reproducing the published scores.
 
 ```text
@@ -72,7 +74,60 @@ Calculate **passed criteria / eligible criteria**. Exclude N/A; count fail and u
 
 To compare a skill with a baseline, use the same task and source package for both, calculate each case's skill-minus-baseline score difference in percentage points, then average those differences. Keep the model and generation settings consistent within each comparison.
 
-## Our published evaluation
+## October 2026 expanded comparison
+
+The October comparison tested 50 development cases, ten per workflow. The frozen case record labels 20 as the original set and 30 as extensions. Each workflow contains four original cases and six extension cases. This verifies recorded lineage, not unchanged source packets against the September public evaluation. It compared the September 7 V1 review package with candidate `2.0.6-rc.20261016.1`. The V1 package is not the exact September public repository version. The V2 (`2.0.0`) update preserves the public baseline and adds selected later fixes. It has not had model evaluation.
+
+The comparison used GPT-6.1 Sol at High effort for generation and grading. Each version received the same task and source packet. All 100 generations and 100 grades completed without failed or missing calls. There were no retries or excluded pairs.
+
+| Workflow | V1 whole-task passes | 2.0.6 whole-task passes |
+|---|---:|---:|
+| Logic Model | 2/10 | 3/10 |
+| Grant Proposal | 3/10 | 4/10 |
+| Program Results | 5/10 | 7/10 |
+| Grant Report | 6/10 | 5/10 |
+| Review Before Sending | 4/10 | 7/10 |
+| **Total** | **20/50 (40%)** | **26/50 (52%)** |
+
+The whole-task pass rate increased by **12 percentage points**. Ten cases improved, four regressed, and 36 tied. Mean applicable-criterion scores increased from **95.69% to 96.26%**. Critical failure flags decreased from 17 across 13 outputs to ten across eight outputs.
+
+A whole-task pass requires the applicable essential criteria to pass under the frozen policy. It does not mean every rubric criterion passed. Unknown outcomes remain separate; neither version had an unknown whole-task result in this comparison. Criterion scores average the fraction of applicable criteria passed for each output. Critical failures and regressions remain visible alongside those averages.
+
+Grant Report whole-task passes decreased from six to five. Grant Proposal mean criterion scores decreased from 96.19% to 95.04%. The comparison does not show improvement on every workflow or measure.
+
+Detailed October comparison records are retained locally and are not included in this repository. The tables summarize those records. Readers cannot independently recompute the October results from this package. Original packets, answers, grading rationales, and private reference labels are also excluded.
+
+### Grading changes and limits
+
+The October grading instructions added or formalized these rules:
+
+- Accept clearly linked shared context when it establishes the required source, period, population, or scope.
+- Assess meaning without requiring a preferred heading, ledger, or repeated phrase.
+- Separate demonstrated violations from insufficient evidence; keep severity separate from the verdict.
+- Select the first applicable review status: blocking issues, insufficient evidence, staff review, then no blocking issues.
+- Treat generation instructions as provenance, not source evidence or new rubric authority.
+
+Shared context must establish the required fact. Source presence alone is insufficient. Task context, deterministic checks, and scoring corrections already existed in V1. The public CSVs remain the original review rubrics. They alone do not reproduce the October interpretation contract, applicability rules, or essential-criterion policy.
+
+The grader saw generation instructions as provenance context and was therefore nonblind. Known errors remain. Earlier calibration did not qualify the revised grader. These are verified method changes, not evidence of improved grader accuracy. Both versions used the same grading configuration; the comparison does not isolate the effect of grader changes.
+
+All 50 cases were used during development. One generation per version and case does not establish unseen performance or real-world reliability. Expert review remains pending. The comparison does not measure the exact public baseline or establish new Sonnet or Opus results.
+
+### Separate 2.0.7 follow-up
+
+Candidate `2.0.7` completed three fresh generations and three grades. All four targeted criteria passed; two of three whole tasks passed. The grant task retained `GP-01` for omitted eligibility intervals and critical `SH-12` for internal approval procedure in recipient copy.
+
+This follow-up does not replace the 50-case comparison or evaluate the V2 (`2.0.0`) release. Current native Claude validation remains unperformed. The September platform checks below apply only to the earlier instructions.
+
+### Offline verification
+
+```sh
+python3 evals/verify.py
+```
+
+The verifier recomputes the September summaries and checks rubric inventory, workflow inventory, and local links. It does not check the October comparison, current instruction hashes, or judgment accuracy. It does not call a model. Historical hashes identify the original evaluated files, not the current plugin.
+
+## September 2026 original evaluation
 
 **Cases.** We evaluated 20 development cases, four per workflow. Cases combine public-source documents with synthetic supporting materials assembled into nonprofit tasks. Each comparison used the same task and source package with and without the skill. These cases were used during development, rather than reserved as an unseen test set; they are not real nonprofit deployments.
 
@@ -82,4 +137,16 @@ The published Sol scores include versioned scoring corrections to existing outpu
 
 Separate Claude Desktop/Cowork and ChatGPT Work checks confirmed explicit execution of all five skills. Cowork tests also found grounding, recipient/staff separation, and sensitive-text handling errors; review generated work before use.
 
-Original source packets, full outputs, and the generation harness are not included. The CSVs describe pass conditions; the original execution also used applicability, routing, and correction logic. Run `python3 evals/verify.py` to check the published score arithmetic and evaluated file identities locally; it does not verify judge reasoning or rerun the experiment.
+Original source packets, full outputs, and the generation harness are not included. The CSVs describe pass conditions; the original execution also used applicability, routing, and correction logic. The original `results.json` and rubric CSVs remain unchanged. Their evaluated file hashes identify the September files, not the current plugin. The September files remain available at commit `e619dd776fb57a3126d2c48bdf436d239c809960`.
+
+
+Average skill-minus-baseline improvement in percentage points:
+
+| Workflow | Sonnet 5 | Opus 5 | GPT-5.6 Sol |
+|---|---:|---:|---:|
+| Logic Model | -6.9 | +8.0 | +8.7 |
+| Grant Proposal | +11.7 | +22.7 | +19.6 |
+| Program Results | -0.6 | +5.9 | +4.4 |
+| Grant Report | +23.9 | +1.7 | +18.1 |
+| Review Before Sending | +14.7 | +9.5 | +8.7 |
+| **Overall mean** | **+8.6** | **+9.6** | **+11.9** |
